@@ -1,0 +1,20 @@
+#!/bin/bash
+
+###############################
+# create local user account(s)
+###############################
+
+
+echo -n "enter the new user account name: "
+read user_account
+
+echo "the user account will be created; $user_account"
+echo "do you wish to continue (y/n)?"
+read answer
+
+if [ "$answer" == "y" ]; then sudo useradd $user_account
+else echo "aborted process"
+fi
+
+sudo cat /etc/passwd | grep -i $user_account && echo "looks like your user account was successfully created"
+
