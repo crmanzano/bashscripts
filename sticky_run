@@ -1,0 +1,14 @@
+#!/bin/bash
+#this is a work in progress...
+if [ -xO  ]; then
+	echo "we found some exe files that need to move: "
+ls -F | grep '*$' > move_me && cat -n move_me
+read -r -p "would you like to move these files? [y/N] " response
+response=${response,,}
+if 	[[ $response =~ ^(yes|y)$ ]]
+then 
+	for i in $(cat move_me); do mv $i runME/; done
+else
+	echo "you either chose not to move your executable's or we did not find any files with the sticky bit enabled"
+fi
+fi
