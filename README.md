@@ -1,2 +1,2 @@
-# bashscripts
-all bashscripts go here
+# bash, expect scripts
+all scripts go here
