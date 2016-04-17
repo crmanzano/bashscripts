@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+#telnet to horizontal cdu/pdu and commence rebooting stb's
+#Carlos R. Manzano, ISG Support AT&T 2016
+#this file will hold file attributes to help with accidental file modifications, chattr +i, sticky bits
+
+spawn telnet 192.168.0.24
+expect "Username:"
+send "admn\r"
+expect "Password:"
+send "admn\r"
+send_user "\n### Welcome, type REBOOT <enter>, type Master_# <enter>, where # is the STB_ID. This will reboot the targeted STB_ID. e.g. Master_1 equals STB_1. To reboot all STB's, type all <enter> ###\n"
+interact
+#end of script
