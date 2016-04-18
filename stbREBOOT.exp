@@ -1,6 +1,6 @@
 #!/usr/bin/expect
 #telnet to horizontal cdu/pdu and commence rebooting stb's
-#Carlos R. Manzano, ISG Support AT&T 2016
+#Carlos R. Manzano, AT&T Support 2016
 #this file will hold file attributes to help with accidental file modifications, chattr +i, sticky bits
 
 spawn telnet 192.168.0.24
