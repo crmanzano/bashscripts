@@ -1,2 +1,2 @@
-# bash, expect scripts
+# bash, expect, python
 all scripts go here
